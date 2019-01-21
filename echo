@@ -55,4 +55,5 @@ KiB Swap:(B[m[39;49m[1m  8293372 (B[m[39;49mtotal,(B[m[39;49m[1m  829
 (B[m   10 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 lru-add-drain                              (B[m[39;49m[K
 (B[m   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.02 watchdog/0                                 (B[m[39;49m[K
 (B[m   12 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/0                                    (B[m[39;49m[K
-(B[m   13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/1                                    (B[m[39;49m[K[6;1H[7m Command disabled, 'A' mode required [?25l(B[m[39;49m[K[?1l>[21;1H[?12l[?25h
+(B[m   13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/1                                    (B[m[39;49m[K[6;1H[7m Command disabled, 'A' mode required [?25l(B[m[39;49m[K[?1l>[21;1H[?12l[?25h[?1l>[21;1H
+[?12l[?25h[K

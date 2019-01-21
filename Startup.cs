@@ -32,7 +32,7 @@ namespace core
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             // other service configurations go here
             services.AddDbContextPool<core.TOOEZContext>( // replace "YourDbContext" with the class name of your DbContext
-                options => options.UseMySql("Server=localhost;Database=TOEZZ;User=luca;Password=0000;", // replace with your Connection String
+                options => options.UseMySql("Server=localhost;Database=TOEZZ;User=ezfish;Password=0000;", // replace with your Connection String
                     mySqlOptions =>
                     {
                         mySqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql); // replace with your Server Version and Type
