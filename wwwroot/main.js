@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-top-menu></app-top-menu>\n<app-login></app-login>\n<<<<<<< HEAD\n<app-test-csv></app-test-csv>\n=======\n<router-outlet></router-outlet>\n>>>>>>> AddingRouting\n<!-- <app-home></app-home> -->\n<!-- <app-get-info-by-email></app-get-info-by-email> -->\n<!-- <div>footerr</div> -->\n<!-- <button class=\"btn btn-primary\">Salva</button>\n<fa name=\"cog\" animation=\"spin\"></fa>\n<fa name=\"snowflake-o\" animation=\"pulse\"></fa> -->\n"
+module.exports = "<app-top-menu></app-top-menu>\n<app-login></app-login>\n<router-outlet></router-outlet>\n<!-- <app-home></app-home> -->\n<!-- <app-get-info-by-email></app-get-info-by-email> -->\n<!-- <div>footerr</div> -->\n<!-- <button class=\"btn btn-primary\">Salva</button>\n<fa name=\"cog\" animation=\"spin\"></fa>\n<fa name=\"snowflake-o\" animation=\"pulse\"></fa> -->\n"
 
 /***/ }),
 
@@ -967,9 +967,9 @@ var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
         this.urlGidi = "http://192.168.33.200:8080/";
-        this.urlHome = "http://192.168.1.101:8080/";
+        this.urlHome = "http://192.168.1.200:8080/";
         this.urlToEz = "http://192.168.33.200/";
-        this.endpoint = this.urlGidi + 'api/';
+        this.endpoint = this.urlHome + 'api/';
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json'
