@@ -106,6 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componenets_not_found_component_not_found_component_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./componenets/not-found-component/not-found-component.component */ "./src/app/componenets/not-found-component/not-found-component.component.ts");
 /* harmony import */ var _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./componenets/laghi/laghi.component */ "./src/app/componenets/laghi/laghi.component.ts");
 /* harmony import */ var _componenets_tecniche_tecniche_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./componenets/tecniche/tecniche.component */ "./src/app/componenets/tecniche/tecniche.component.ts");
+/* harmony import */ var _componenets_lago_lago_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./componenets/lago/lago.component */ "./src/app/componenets/lago/lago.component.ts");
+
 
 
 
@@ -141,6 +143,7 @@ var AppModule = /** @class */ (function () {
                 _componenets_not_found_component_not_found_component_component__WEBPACK_IMPORTED_MODULE_16__["NotFoundComponentComponent"],
                 _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_17__["LaghiComponent"],
                 _componenets_tecniche_tecniche_component__WEBPACK_IMPORTED_MODULE_18__["TecnicheComponent"],
+                _componenets_lago_lago_component__WEBPACK_IMPORTED_MODULE_19__["LagoComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -150,6 +153,8 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([
                     { path: "", component: _componenets_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"] },
                     { path: "laghi", component: _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_17__["LaghiComponent"] },
+                    { path: "laghi", component: _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_17__["LaghiComponent"] },
+                    { path: "lago/:id", component: _componenets_lago_lago_component__WEBPACK_IMPORTED_MODULE_19__["LagoComponent"] },
                     { path: "tecniche", component: _componenets_tecniche_tecniche_component__WEBPACK_IMPORTED_MODULE_18__["TecnicheComponent"] },
                     { path: "contattaci", component: _componenets_get_info_by_email_get_info_by_email_component__WEBPACK_IMPORTED_MODULE_14__["GetInfoByEmailComponent"] },
                     { path: "**", component: _componenets_not_found_component_not_found_component_component__WEBPACK_IMPORTED_MODULE_16__["NotFoundComponentComponent"] }
@@ -347,7 +352,7 @@ var Testi = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVuZXRzL2xhZ2hpL2xhZ2hpLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".box{\n    border: 1px solid red;\n    width: 90%;\n    margin: auto;\n    margin-top: 1em;\n    border-radius: 10px;\n    overflow: hidden;\n    position: relative;\n}\n\n.box:hover{\n    -webkit-transform : scale(1.01);\n            transform : scale(1.01);\n    box-shadow: 5px 5px 5px gray;\n}\n\n.box-body{\n    display: flex;\n}\n\n.box-nome-lago{\n    border: 0px solid green;\n    padding: 2px;\n    background: lightgreen;\n}\n\n.box-text{\n    border: 1px solid orange;\n    background: lightgoldenrodyellow;\n}\n\n.wrapper-info{\n    flex: 3;\n    padding: 5px;\n}\n\n.box-preview{\n    background: lightgoldenrodyellow;\n    margin: 3px;\n    flex: 1;\n}\n\np .not-open{\n    color: red;\n}\n\np .open{\n    color: green;\n}\n\np .half{\n    color: gold;\n}\n\n.cover {\n    width: 100%;\n    height: 100%;\n    background: rgba(255, 232, 24, 0.164);\n    position: absolute;\n}\n\n.cover:hover{\n    background: rgba(255, 232, 24, 0.0);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW5ldHMvbGFnaGkvbGFnaGkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHFCQUFxQjtJQUNyQixVQUFVO0lBQ1YsWUFBWTtJQUNaLGVBQWU7SUFDZixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLCtCQUF1QjtZQUF2Qix1QkFBdUI7SUFDdkIsNEJBQTRCO0FBQ2hDOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osc0JBQXNCO0FBQzFCOztBQUdBO0lBQ0ksd0JBQXdCO0lBQ3hCLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLE9BQU87SUFDUCxZQUFZO0FBQ2hCOztBQUNBO0lBQ0ksZ0NBQWdDO0lBQ2hDLFdBQVc7SUFDWCxPQUFPO0FBQ1g7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixxQ0FBcUM7SUFDckMsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksbUNBQW1DO0FBQ3ZDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW5ldHMvbGFnaGkvbGFnaGkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ib3h7XG4gICAgYm9yZGVyOiAxcHggc29saWQgcmVkO1xuICAgIHdpZHRoOiA5MCU7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIG1hcmdpbi10b3A6IDFlbTtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4uYm94OmhvdmVye1xuICAgIHRyYW5zZm9ybSA6IHNjYWxlKDEuMDEpO1xuICAgIGJveC1zaGFkb3c6IDVweCA1cHggNXB4IGdyYXk7XG59XG5cbi5ib3gtYm9keXtcbiAgICBkaXNwbGF5OiBmbGV4O1xufVxuXG4uYm94LW5vbWUtbGFnb3tcbiAgICBib3JkZXI6IDBweCBzb2xpZCBncmVlbjtcbiAgICBwYWRkaW5nOiAycHg7XG4gICAgYmFja2dyb3VuZDogbGlnaHRncmVlbjtcbn1cblxuXG4uYm94LXRleHR7XG4gICAgYm9yZGVyOiAxcHggc29saWQgb3JhbmdlO1xuICAgIGJhY2tncm91bmQ6IGxpZ2h0Z29sZGVucm9keWVsbG93O1xufVxuXG4ud3JhcHBlci1pbmZve1xuICAgIGZsZXg6IDM7XG4gICAgcGFkZGluZzogNXB4O1xufVxuLmJveC1wcmV2aWV3e1xuICAgIGJhY2tncm91bmQ6IGxpZ2h0Z29sZGVucm9keWVsbG93O1xuICAgIG1hcmdpbjogM3B4O1xuICAgIGZsZXg6IDE7XG59XG5cbnAgLm5vdC1vcGVue1xuICAgIGNvbG9yOiByZWQ7XG59XG5cbnAgLm9wZW57XG4gICAgY29sb3I6IGdyZWVuO1xufVxuXG5wIC5oYWxme1xuICAgIGNvbG9yOiBnb2xkO1xufVxuXG4uY292ZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjMyLCAyNCwgMC4xNjQpO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cblxuLmNvdmVyOmhvdmVye1xuICAgIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyMzIsIDI0LCAwLjApO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -358,7 +363,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  laghi works!\n</p>\n"
+module.exports = "<!-- Elenco laghi  -->\n\n<div class=\"wrpapper\">\n\n    <div class=\"elenco-container\">\n\n        <!-- inizio presentazione lago -->\n        <div class=\"box transition3\" [routerLink]=\"['/lago',l.id]\" *ngFor=\"let l of laghi\">\n            <div class=\"cover transition3\"></div>\n            <h5 class=\"box-nome-lago\">Il Murett</h5>\n            <div class=\"box-body\">\n                <p class=\"box-info\">\n                    <div class=\"wrapper-info\">\n                        <p>\n                        Giorni di Apertura :  <span class=\"day open\"> L </span>\n                                    <span class=\"day open\"> M </span>\n                                    <span class=\"day not-open\"> M </span>\n                                    <span class=\"day open\"> G </span>\n                                    <span class=\"day open\"> V </span>\n                                    <span class=\"day open\"> S </span>\n                                    <span class=\"day half\"> D </span>\n                        </p>\n                        <p><fa name=\"globe\"></fa> Indirizzo</p>\n                        <p><fa name=\"phone\"></fa> Numero di Telefono</p>\n                        <p><fa name=\"envelope-o\"></fa> Contatto E-Mail</p>\n                    \n                        <p class=\"box-text\">{{l.info[rtmSvc.config.lang]}}</p>\n                    </div>\n                    <div class=\"box-preview\"><img src=\"../../../assets/media/LaFametta.svg\" alt=\"\"></div>\n            </div>\n            \n        </div>\n        <!-- fine presentazione lago -->\n\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -366,20 +371,33 @@ module.exports = "<p>\n  laghi works!\n</p>\n"
 /*!******************************************************!*\
   !*** ./src/app/componenets/laghi/laghi.component.ts ***!
   \******************************************************/
-/*! exports provided: LaghiComponent */
+/*! exports provided: LaghiComponent, LakePreview */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LaghiComponent", function() { return LaghiComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LakePreview", function() { return LakePreview; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_global_runtime_config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/global-runtime-config.service */ "./src/app/services/global-runtime-config.service.ts");
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/api.service */ "./src/app/services/api.service.ts");
+
+
 
 
 var LaghiComponent = /** @class */ (function () {
-    function LaghiComponent() {
+    function LaghiComponent(_globalRuntimeService, _api) {
+        this.laghi = [];
+        this.rtmSvc = _globalRuntimeService;
+        this.api = _api;
     }
     LaghiComponent.prototype.ngOnInit = function () {
+        this.laghi = this.api.getLakesPreviews();
+        console.log(this.laghi);
+    };
+    LaghiComponent.prototype.routeToLake = function () {
+        console.log("vai al lago il muret");
     };
     LaghiComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -387,9 +405,71 @@ var LaghiComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./laghi.component.html */ "./src/app/componenets/laghi/laghi.component.html"),
             styles: [__webpack_require__(/*! ./laghi.component.css */ "./src/app/componenets/laghi/laghi.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_global_runtime_config_service__WEBPACK_IMPORTED_MODULE_2__["GlobalRuntimeConfigService"], src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
     ], LaghiComponent);
     return LaghiComponent;
+}());
+
+var LakePreview = /** @class */ (function () {
+    function LakePreview(id, giornoDiApertura, nome, indirizzo, telefono, email, info) {
+    }
+    return LakePreview;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/componenets/lago/lago.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/componenets/lago/lago.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVuZXRzL2xhZ28vbGFnby5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/componenets/lago/lago.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/componenets/lago/lago.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  lago works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/componenets/lago/lago.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/componenets/lago/lago.component.ts ***!
+  \****************************************************/
+/*! exports provided: LagoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LagoComponent", function() { return LagoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LagoComponent = /** @class */ (function () {
+    function LagoComponent() {
+    }
+    LagoComponent.prototype.ngOnInit = function () {
+    };
+    LagoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-lago',
+            template: __webpack_require__(/*! ./lago.component.html */ "./src/app/componenets/lago/lago.component.html"),
+            styles: [__webpack_require__(/*! ./lago.component.css */ "./src/app/componenets/lago/lago.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LagoComponent);
+    return LagoComponent;
 }());
 
 
@@ -886,7 +966,7 @@ module.exports = ".langFlag{\n    width: 35px;\n    height: 50px;\n    border-ra
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand transition3\" routerLink=\"/\">Too Ez Fish</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/laghi\">{{txt.laghi[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/tecniche\">{{txt.tecniche[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"#\">{{txt.squadre[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"#\">{{txt.specieIttiche[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"\n          aria-haspopup=\"true\" aria-expanded=\"false\">\n          Info\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" routerLink=\"/contattaci\">{{txt.contattaci[rtmSvc.config.lang]}}</a>\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n        </div>\n      </li>\n\n    </ul>\n    <app-login-info-for-menu></app-login-info-for-menu>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder='{{txt.placeHolderRicerca[rtmSvc.config.lang]}}'\n        aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">{{txt.pulsanteRicerca[rtmSvc.config.lang]}}</button>\n    </form>\n    <img class=\"langFlag transition3\" (click)=\"changeLang(0)\" src=\"../../../assets/media/icons/BandieraItalianaIcon.svg\" alt=\"Bandiera Italiana, Italian Flag\">\n    <img class=\"langFlag transition3\" (click)=\"changeLang(1)\" src=\"../../../assets/media/icons/BandieraIngleseIcon.svg\" alt=\"Bandiera Britannica, UK Flag\">\n  </div>\n \n</nav>\n<div class=\"outborder\"></div>\n\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand transition3\" routerLink=\"/\">Too Ez Fish</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n    aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/laghi\">{{txt.laghi[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/tecniche\">{{txt.tecniche[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"#\">{{txt.squadre[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"#\">{{txt.specieIttiche[rtmSvc.config.lang]}}</a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"\n          aria-haspopup=\"true\" aria-expanded=\"false\">\n          Info\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"dropdown-item\" routerLink=\"/contattaci\">{{txt.contattaci[rtmSvc.config.lang]}}</a>\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n        </div>\n      </li>\n\n    </ul>\n    <app-login-info-for-menu></app-login-info-for-menu>\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" text=\"ciao\" type=\"search\" placeholder='{{txt.placeHolderRicerca[rtmSvc.config.lang]}}'\n        aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">{{txt.pulsanteRicerca[rtmSvc.config.lang]}}</button>\n    </form>\n    <img class=\"langFlag transition3\" (click)=\"changeLang(0)\" src=\"../../../assets/media/icons/BandieraItalianaIcon.svg\" alt=\"Bandiera Italiana, Italian Flag\">\n    <img class=\"langFlag transition3\" (click)=\"changeLang(1)\" src=\"../../../assets/media/icons/BandieraIngleseIcon.svg\" alt=\"Bandiera Britannica, UK Flag\">\n  </div>\n \n</nav>\n<div class=\"outborder\"></div>\n\n"
 
 /***/ }),
 
@@ -958,6 +1038,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../componenets/laghi/laghi.component */ "./src/app/componenets/laghi/laghi.component.ts");
+
 
 
 
@@ -1019,6 +1101,14 @@ var ApiService = /** @class */ (function () {
     ApiService.prototype.SendEmailForInfo = function (mex) {
         var emailInfoForCore = JSON.stringify(mex);
         return this.http.post(this.endpoint + 'email', emailInfoForCore, this.httpOptions);
+    };
+    ApiService.prototype.getLakesPreviews = function () {
+        var laghi = [];
+        laghi.push(new _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_5__["LakePreview"](1, [1, 1, 0, 0, 2, 2, 2], "Murett", "via giusti", "3284567854", "hdasd@sssdad.23", ["tanti pesci", "lots of fishes"]));
+        laghi.push(new _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_5__["LakePreview"](2, [1, 1, 0, 0, 1, 1, 2], "Coogliate", "via wqeqw", "qeqw", "hdasd@sdadss.23", ["tanti pffsci", "lots of "]));
+        laghi.push(new _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_5__["LakePreview"](3, [1, 1, 0, 0, 0, 0, 2], "Monzoro", "via asd", "328456qww7854", "hdasd@ddsdad.23", ["tanffti pesci", "lots  fishes"]));
+        laghi.push(new _componenets_laghi_laghi_component__WEBPACK_IMPORTED_MODULE_5__["LakePreview"](4, [0, 0, 0, 0, 0, 2, 2], "Marcellino", "via marce", "s", "hdasd@sdaddd.23", ["tanti f", " of fishes"]));
+        return laghi;
     };
     ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
