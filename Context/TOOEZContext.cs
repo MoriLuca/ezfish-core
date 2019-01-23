@@ -134,6 +134,10 @@ namespace core
                     .HasColumnName("NOME")
                     .HasColumnType("varchar(50)");
 
+                entity.Property(e => e.PreviewImg)
+                    .HasColumnName("PREVIEW_IMG")
+                    .HasColumnType("varchar(250)");
+
                 entity.Property(e => e.Telefono)
                     .HasColumnName("TELEFONO")
                     .HasColumnType("varchar(50)");
