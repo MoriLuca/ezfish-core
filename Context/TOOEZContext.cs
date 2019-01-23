@@ -16,6 +16,9 @@ namespace core
         }
 
         public virtual DbSet<Dbg> Dbg { get; set; }
+        public virtual DbSet<LagoApertura> LagoApertura { get; set; }
+        public virtual DbSet<LagoBasic> LagoBasic { get; set; }
+        public virtual DbSet<LagoInfo> LagoInfo { get; set; }
         public virtual DbSet<PeopleBasic> PeopleBasic { get; set; }
         public virtual DbSet<PeopleInfo> PeopleInfo { get; set; }
 
@@ -24,7 +27,7 @@ namespace core
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("Server=localhost;Database=TOOEZ;User=ezfish;Password=0000;");
+                optionsBuilder.UseMySql("Server=localhost;Database=TOOEZ;User=luca;Password=0000;");
             }
         }
 
@@ -63,6 +66,107 @@ namespace core
                 entity.Property(e => e.State)
                     .HasColumnName("STATE")
                     .HasColumnType("tinyint(1)");
+            });
+
+            modelBuilder.Entity<LagoApertura>(entity =>
+            {
+                entity.HasKey(e => e.IdLago)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("LAGO_APERTURA");
+
+                entity.Property(e => e.IdLago)
+                    .HasColumnName("ID_LAGO")
+                    .HasColumnType("int(11)");
+
+                entity.Property(e => e.Dom)
+                    .HasColumnName("DOM")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Gio)
+                    .HasColumnName("GIO")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Lun)
+                    .HasColumnName("LUN")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Mar)
+                    .HasColumnName("MAR")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Mer)
+                    .HasColumnName("MER")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Sab)
+                    .HasColumnName("SAB")
+                    .HasColumnType("int(1)");
+
+                entity.Property(e => e.Ven)
+                    .HasColumnName("VEN")
+                    .HasColumnType("int(1)");
+
+                entity.HasOne(d => d.IdLagoNavigation)
+                    .WithOne(p => p.LagoApertura)
+                    .HasForeignKey<LagoApertura>(d => d.IdLago)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("LAGO_APERTURA_ibfk_1");
+            });
+
+            modelBuilder.Entity<LagoBasic>(entity =>
+            {
+                entity.ToTable("LAGO_BASIC");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .HasColumnType("int(11)");
+
+                entity.Property(e => e.Email)
+                    .HasColumnName("EMAIL")
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.Indirizzo)
+                    .HasColumnName("INDIRIZZO")
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.Nome)
+                    .HasColumnName("NOME")
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.Telefono)
+                    .HasColumnName("TELEFONO")
+                    .HasColumnType("varchar(50)");
+            });
+
+            modelBuilder.Entity<LagoInfo>(entity =>
+            {
+                entity.HasKey(e => e.IdLago)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("LAGO_INFO");
+
+                entity.HasIndex(e => new { e.IdLago, e.Lang })
+                    .HasName("ID_LAGO")
+                    .IsUnique();
+
+                entity.Property(e => e.IdLago)
+                    .HasColumnName("ID_LAGO")
+                    .HasColumnType("int(11)");
+
+                entity.Property(e => e.Info)
+                    .HasColumnName("INFO")
+                    .HasColumnType("text");
+
+                entity.Property(e => e.Lang)
+                    .HasColumnName("LANG")
+                    .HasColumnType("varchar(3)");
+
+                entity.HasOne(d => d.IdLagoNavigation)
+                    .WithOne(p => p.LagoInfo)
+                    .HasForeignKey<LagoInfo>(d => d.IdLago)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("LAGO_INFO_ibfk_1");
             });
 
             modelBuilder.Entity<PeopleBasic>(entity =>

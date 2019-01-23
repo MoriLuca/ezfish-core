@@ -12874,11 +12874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/luca/Documents/ezfish/core/core.csproj",
+      "projectUniqueName": "/home/luca/Documents/Angular/core/core.csproj",
       "projectName": "core",
-      "projectPath": "/home/luca/Documents/ezfish/core/core.csproj",
+      "projectPath": "/home/luca/Documents/Angular/core/core.csproj",
       "packagesPath": "/home/luca/.nuget/packages/",
-      "outputPath": "/home/luca/Documents/ezfish/core/obj/",
+      "outputPath": "/home/luca/Documents/Angular/core/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
