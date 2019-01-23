@@ -146,21 +146,17 @@ namespace core
 
                 entity.ToTable("LAGO_INFO");
 
-                entity.HasIndex(e => new { e.IdLago, e.Lang })
-                    .HasName("ID_LAGO")
-                    .IsUnique();
-
                 entity.Property(e => e.IdLago)
                     .HasColumnName("ID_LAGO")
                     .HasColumnType("int(11)");
 
-                entity.Property(e => e.Info)
-                    .HasColumnName("INFO")
+                entity.Property(e => e.InfoEng)
+                    .HasColumnName("INFO_ENG")
                     .HasColumnType("text");
 
-                entity.Property(e => e.Lang)
-                    .HasColumnName("LANG")
-                    .HasColumnType("varchar(3)");
+                entity.Property(e => e.InfoIta)
+                    .HasColumnName("INFO_ITA")
+                    .HasColumnType("text");
 
                 entity.HasOne(d => d.IdLagoNavigation)
                     .WithOne(p => p.LagoInfo)

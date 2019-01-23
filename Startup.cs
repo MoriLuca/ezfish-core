@@ -41,6 +41,7 @@ namespace core
 
             services.AddSingleton<Services.Db.Users>();
             services.AddSingleton<Services.Email.Sender>();
+            services.AddSingleton<Services.Lakes.LakesInfo>();
             services.AddCors();
         }
 

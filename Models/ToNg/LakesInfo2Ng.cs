@@ -1,4 +1,4 @@
-namespace Models.Lakes {
+namespace Models.ToNg {
     
     public class LakesInfo{
         public int id { get; set; }
