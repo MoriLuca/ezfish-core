@@ -29,33 +29,7 @@ namespace core.Controllers
         [HttpGet]
         public JsonResult Get ()
         {
-            _lakesInfo.GetLakes();
-            // List<Models.Lakes.LakesInfo> Laghi = new List<Models.Lakes.LakesInfo>();
-            // Laghi.Add(new Models.Lakes.LakesInfo(){
-            //     id = 2,
-            //     nome = "muretto",
-            //     giornoDiApertura = new int[]{1,1,1,1,1,0,2},
-            //     indirizzo = "via del muretto",
-            //     email = "email@laghetto.it",
-            //     telefono = "0235326",
-            //     info = new string[] {"pesci","fish"},
-            //     prewievImg = "../../../assets/media/LaFametta.svg"
-
-
-            // });
-            // Laghi.Add(new Models.Lakes.LakesInfo(){
-            //     id = 2,
-            //     nome = "muretto2",
-            //     giornoDiApertura = new int[]{0,0,1,2,2,2,2},
-            //     indirizzo = "via del muretto",
-            //     email = "email@laghetto.it",
-            //     telefono = "0235326",
-            //     info = new string[] {"pesci","fish"},
-            //     prewievImg = "../../../assets/media/lago.svg"
-
-
-            // });
-            return new JsonResult(1);
+            return new JsonResult(_lakesInfo.GetLakes());
         }
 
     }

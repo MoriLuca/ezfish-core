@@ -28,7 +28,12 @@ namespace Services.Lakes {
             }
 
             if (res != null){
-                return new List<Models.ToNg.LakesInfo>();
+                List<Models.ToNg.LakesInfo> lakesInfo = new  List<Models.ToNg.LakesInfo>();
+                foreach (var l in res)
+                {
+                    lakesInfo.Add(new Models.ToNg.LakesInfo(l));
+                }
+                return lakesInfo;
             }
             else{
                 throw new NotImplementedException();
